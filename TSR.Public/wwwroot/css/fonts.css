@@ -1,0 +1,117 @@
+:root {
+  --theme-primary-font: "Almarai", sans-serif;
+  --theme-secondary-font: "Almarai", sans-serif;
+  --theme-font-size: 1rem;
+  --theme-font-weight: 400;
+  --theme-letter-spacing: -0.03px;
+  --theme-container: 1280px;
+  --theme-gutter: 15px;
+  --theme-theme-radius-xsmall: 6px;
+  --theme-theme-radius-small: 8px;
+  --theme-theme-radius-base: 12px;
+  --theme-theme-radius-large: 18px;
+  --theme-form-font-size: 15px;
+  --theme-form-font-weight: 500;
+  --theme-form-radius: 12px;
+  --theme-form-height: 42px;
+}
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  /*  src: url('../fonts/Cairo-ExtraBold.ttf') format('truetype');*/
+  src: url("../fonts/Alexandria-Bold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Thin.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/Alexandria-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'saudi_riyal';
+  src: url('../fonts/saudi_riyal.woff2') format('woff2'),
+  url('../fonts/saudi_riyal.woff') format('woff'),
+  url('../fonts/saudi_riyal.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* almarai-300 - arabic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/almarai-v18-arabic_latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* almarai-regular - arabic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/almarai-v18-arabic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* almarai-700 - arabic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/almarai-v18-arabic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* almarai-800 - arabic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/almarai-v18-arabic_latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

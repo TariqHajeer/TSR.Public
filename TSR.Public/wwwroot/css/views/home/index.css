@@ -1,0 +1,102 @@
+@import url("base.css");
+
+.carousel-container {
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+  margin-block-start: -130px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+
+.search-box {
+  background: white;
+  border-radius: 8px;
+  padding: 0.2rem 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--color-primary);
+}
+
+.search-box:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  background: transparent;
+}
+.search-input::placeholder {
+  color: var(--color-primary);
+}
+
+.search-btn {
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+  transform: rotate(15deg);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+}
+.carousel-indicators,
+.carousel-caption {
+  bottom: 150px !important;
+}
+.brands {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: auto;
+}
+.brands .title {
+  margin: 1rem 0.4rem;
+  font-weight: 600;
+}
+.brand {
+  text-align: center;
+  padding: 0.2rem;
+  border-radius: 6px;
+}
+.brand:hover {
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+.collapse-btn-row {  
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.collapse-btn {
+  color: var(--color-primary);
+}
