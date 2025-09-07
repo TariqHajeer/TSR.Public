@@ -9,7 +9,9 @@ services.AddHttpContextAccessor();
 services.AddControllersWithViews();
 var url = config.GetValue<string>("API")!;
 services.RegisterApplication(url);
-var timeOut= config.GetValue<int>("SessionTimeOut")!;
+var timeOut = config.GetValue<int>("SessionTimeOut")!;
+//needed for the sessions 
+services.AddDistributedMemoryCache();
 services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(timeOut);
@@ -19,6 +21,7 @@ services.AddSession(options =>
 services.AddLocalizationWithControllersAndView();
 services.AddAuth();
 services.AddMemoryCache();
+
 
 var app = builder.Build();
 app.UseStaticFiles();
