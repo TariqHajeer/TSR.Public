@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Layout" xml:space="preserve">
+    <value>ltr</value>
+  </data>
+    <data name="Language" xml:space="preserve">
+    <value>en</value>
+  </data>
+    <data name="Sellers" xml:space="preserve">
+    <value>Sellers</value>
+  </data>
+    <data name="Request" xml:space="preserve">
+    <value>Request</value>
+  </data>
+    <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+    <data name="youHaveToLoginFirst" xml:space="preserve">
+    <value>You have to login first</value>
+  </data>
+    <data name="youAreNoTLoggedIn" xml:space="preserve">
+    <value>you are not logged in yet. </value>
+  </data>
+    <data name="Login" xml:space="preserve">
+    <value>login</value>
+  </data>
+    <data name="Success" xml:space="preserve">
+    <value>Success </value>
+  </data>
+    <data name="Error" xml:space="preserve">
+    <value>Error </value>
+  </data>
+    <data name="ProductsByCategory" xml:space="preserve">
+    <value>Products by category </value>
+  </data>
+</root>

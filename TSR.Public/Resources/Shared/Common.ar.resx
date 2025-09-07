@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Layout" xml:space="preserve">
+    <value>rtl</value>
+  </data>
+    <data name="Language" xml:space="preserve">
+    <value>ar</value>
+  </data>
+    <data name="Sellers" xml:space="preserve">
+    <value>البائعين</value>
+  </data>
+    <data name="Request" xml:space="preserve">
+    <value>طلب</value>
+  </data>
+    <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+    <data name="youHaveToLoginFirst" xml:space="preserve">
+    <value>بحاجة إلى تسيجل الدخول</value>
+  </data>
+    <data name="youAreNoTLoggedIn" xml:space="preserve">
+    <value>لم يتم تسجيل دخول الحساب </value>
+  </data>
+    <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول </value>
+  </data>
+    <data name="Success" xml:space="preserve">
+    <value>نجحت العملية </value>
+  </data>
+    <data name="Error" xml:space="preserve">
+    <value>خطأ </value>
+  </data>
+    <data name="ProductsByCategory" xml:space="preserve">
+    <value>منتجات حسب الفئة</value>
+  </data>
+</root>

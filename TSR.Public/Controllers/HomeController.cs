@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Threading.Tasks;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using TSR.Public.Models;
 
@@ -7,14 +9,16 @@ namespace TSR.Public.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private readonly IBrandService _brandService;
+    public HomeController(ILogger<HomeController> logger, IBrandService brandService)
     {
         _logger = logger;
+        _brandService = brandService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
+        var data= await _brandService.GetAllBrands();
         return View();
     }
 
