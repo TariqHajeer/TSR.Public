@@ -1,0 +1,35 @@
+:root {
+  --green: #3c7a75;
+  --gold: #d9ad71;
+  --blue: #03a2b9;
+  --color-body: #fff;
+  --color-text-primary: #212529;
+  --color-text-description: #868E96;
+  --color-text-light: #B8BDC1;
+  --color-text-lighter: #CED4DA;
+  --color-info: #E9ECEF;
+  --color-info-dark: #DEE2E6;
+  --color-info-light: #F1F3F5;
+  --color-form-border: #CED4DA;
+  --color-form-active-shadow: #ebedf0;
+  --color-form-placeholder: #ADB5BD;
+  --color-primary: #387874;
+  --color-primary-dark: #306763;
+  --color-primary-lighter: #e4f2f1;
+  --color-secondary: #d1a670;
+  --color-secondary-dark: #cb9a5d;
+  --color-secondary-lighter: #fff9c8;
+  --color-success: #12B886;
+  --color-success-dark: #099268;
+  --color-success-lighter: #E6FCF5;
+  --color-danger: #F03E3E;
+  --color-danger-dark: #C92A2A;
+  --color-danger-light: #FFF5F5;
+  --color-warning: #FD7E14;
+  --color-warning-dark: #E8590C;
+  --color-warning-lighter: #FFF4E6;
+  --color-review: #FFD43B;
+  --color-review-dark: #FCC419;
+  --color-review-lighter: #FFF9DB;
+  --color-gradient-1: linear-gradient(45deg, rgb(239, 35, 60) 0%, rgb(244, 113, 3) 100%);
+}

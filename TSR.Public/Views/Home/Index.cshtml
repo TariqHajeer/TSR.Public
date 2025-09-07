@@ -1,8 +1,265 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@section Styles{
+    <link rel="stylesheet" href="~/css/views/home/index.css" asp-append-version="true" />
+}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Carousel Section -->
+<div class="carousel-container">
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="
+              background-image: url('https://www.bocadolobo.com/en/inspiration-and-ideas/wp-content/uploads/2024/12/Aston-Martin-DB11.webp');
+            ">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Discover Amazing Places</h2>
+                    <p>
+                        Explore the world with our search tool and find your next
+                        adventure.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item" style="
+              background-image: url('https://media.ed.edmunds-media.com/bugatti/chiron/2024/fe/2024_bugatti_chiron_f34_fe_110424_1600.jpg');
+            ">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Find Hidden Gems</h2>
+                    <p>Locate unique destinations that are off the beaten path.</p>
+                </div>
+            </div>
+            <div class="carousel-item" style="
+              background-image: url('https://www.lexus.co.nz/content/dam/lexus-v3-new-zealand/discover-lexus/future-concept-cars/lf-zc-concept.jpg');
+            ">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Plan Your Journey</h2>
+                    <p>Use our search to create the perfect travel itinerary.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Search Section -->
+<div class="container search-container">
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="ابحث عن الماركة او الموديل" />
+        <i class="search-btn fas fa-search"></i>
+    </div>
+    <div class="brands">
+        <div class="title">تصفح السيارات حسب الماركة</div>
+        <div class="row">
+            <div class="col-2 brand">
+                <img src="https://media.istockphoto.com/id/495605964/photo/generic-compact-red-car.jpg?s=612x612&w=0&k=20&c=eElEDukSWi6HsUPXflSebpUm7j9tPNq7WvFOGIlqgeA="
+                    alt="" width="100" height="60" />
+                <div class="brand-title">تويوتا</div>
+            </div>
+            <div class="col-2 brand">
+                <img src="https://t4.ftcdn.net/jpg/08/91/68/25/360_F_891682541_TjhpvvUsVBkJBxRJarAgz84Q3io5OpEE.jpg"
+                    alt="" width="100" height="60" />
+                <div class="brand-title">فيراري</div>
+            </div>
+            <div class="col-2 brand">
+                <img src="https://www.shutterstock.com/image-vector/luxury-premium-realistic-sedan-coupe-600nw-2263077435.jpg"
+                    alt="" width="100" height="60" />
+                <div class="brand-title">جي كلاس</div>
+            </div>
+            <div class="col-2 brand">
+                <img src="https://waryhub.com/files/preview/900x810/11742911193rvpbgpfxlfjyo6f11rqgnkfstuesyavdgpsiy4zq4ebujlivtlyqe4pnregxsgluhee96v1yslsr0ct3jl1upkn5ns9skeegktym.png"
+                    alt="" width="100" height="60" />
+                <div class="brand-title">نيسان</div>
+            </div>
+            <div class="col-2 brand">
+                <img src="https://www.freeiconspng.com/thumbs/car-front-png/bmw-car-front-png-30.png" alt="" width="100"
+                    height="60" />
+                <div class="brand-title">بي ام دبليو</div>
+            </div>
+            <div class="col-2 brand">
+                <img src="https://www.shutterstock.com/image-illustration/paris-france-january-9-2022-260nw-2215355157.jpg"
+                    alt="" width="100" height="60" />
+                <div class="brand-title">فورد</div>
+            </div>
+        </div>
+        <!-- Collapsible content -->
+        <div class="collapse mb-4" id="collapseExample">
+            <div class="row mt-2 mb-2">
+                <div class="col-2 brand">
+                    <img src="https://media.istockphoto.com/id/495605964/photo/generic-compact-red-car.jpg?s=612x612&w=0&k=20&c=eElEDukSWi6HsUPXflSebpUm7j9tPNq7WvFOGIlqgeA="
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">تويوتا</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://t4.ftcdn.net/jpg/08/91/68/25/360_F_891682541_TjhpvvUsVBkJBxRJarAgz84Q3io5OpEE.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فيراري</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-vector/luxury-premium-realistic-sedan-coupe-600nw-2263077435.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">جي كلاس</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://waryhub.com/files/preview/900x810/11742911193rvpbgpfxlfjyo6f11rqgnkfstuesyavdgpsiy4zq4ebujlivtlyqe4pnregxsgluhee96v1yslsr0ct3jl1upkn5ns9skeegktym.png"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">نيسان</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.freeiconspng.com/thumbs/car-front-png/bmw-car-front-png-30.png" alt=""
+                        width="100" height="60" />
+                    <div class="brand-title">بي ام دبليو</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-illustration/paris-france-january-9-2022-260nw-2215355157.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فورد</div>
+                </div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-2 brand">
+                    <img src="https://media.istockphoto.com/id/495605964/photo/generic-compact-red-car.jpg?s=612x612&w=0&k=20&c=eElEDukSWi6HsUPXflSebpUm7j9tPNq7WvFOGIlqgeA="
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">تويوتا</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://t4.ftcdn.net/jpg/08/91/68/25/360_F_891682541_TjhpvvUsVBkJBxRJarAgz84Q3io5OpEE.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فيراري</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-vector/luxury-premium-realistic-sedan-coupe-600nw-2263077435.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">جي كلاس</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://waryhub.com/files/preview/900x810/11742911193rvpbgpfxlfjyo6f11rqgnkfstuesyavdgpsiy4zq4ebujlivtlyqe4pnregxsgluhee96v1yslsr0ct3jl1upkn5ns9skeegktym.png"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">نيسان</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.freeiconspng.com/thumbs/car-front-png/bmw-car-front-png-30.png" alt=""
+                        width="100" height="60" />
+                    <div class="brand-title">بي ام دبليو</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-illustration/paris-france-january-9-2022-260nw-2215355157.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فورد</div>
+                </div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-2 brand">
+                    <img src="https://media.istockphoto.com/id/495605964/photo/generic-compact-red-car.jpg?s=612x612&w=0&k=20&c=eElEDukSWi6HsUPXflSebpUm7j9tPNq7WvFOGIlqgeA="
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">تويوتا</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://t4.ftcdn.net/jpg/08/91/68/25/360_F_891682541_TjhpvvUsVBkJBxRJarAgz84Q3io5OpEE.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فيراري</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-vector/luxury-premium-realistic-sedan-coupe-600nw-2263077435.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">جي كلاس</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://waryhub.com/files/preview/900x810/11742911193rvpbgpfxlfjyo6f11rqgnkfstuesyavdgpsiy4zq4ebujlivtlyqe4pnregxsgluhee96v1yslsr0ct3jl1upkn5ns9skeegktym.png"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">نيسان</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.freeiconspng.com/thumbs/car-front-png/bmw-car-front-png-30.png" alt=""
+                        width="100" height="60" />
+                    <div class="brand-title">بي ام دبليو</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-illustration/paris-france-january-9-2022-260nw-2215355157.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فورد</div>
+                </div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-2 brand">
+                    <img src="https://media.istockphoto.com/id/495605964/photo/generic-compact-red-car.jpg?s=612x612&w=0&k=20&c=eElEDukSWi6HsUPXflSebpUm7j9tPNq7WvFOGIlqgeA="
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">تويوتا</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://t4.ftcdn.net/jpg/08/91/68/25/360_F_891682541_TjhpvvUsVBkJBxRJarAgz84Q3io5OpEE.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فيراري</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-vector/luxury-premium-realistic-sedan-coupe-600nw-2263077435.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">جي كلاس</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://waryhub.com/files/preview/900x810/11742911193rvpbgpfxlfjyo6f11rqgnkfstuesyavdgpsiy4zq4ebujlivtlyqe4pnregxsgluhee96v1yslsr0ct3jl1upkn5ns9skeegktym.png"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">نيسان</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.freeiconspng.com/thumbs/car-front-png/bmw-car-front-png-30.png" alt=""
+                        width="100" height="60" />
+                    <div class="brand-title">بي ام دبليو</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-illustration/paris-france-january-9-2022-260nw-2215355157.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فورد</div>
+                </div>
+            </div>
+            <div class="row mt-2 mb-2">
+                <div class="col-2 brand">
+                    <img src="https://media.istockphoto.com/id/495605964/photo/generic-compact-red-car.jpg?s=612x612&w=0&k=20&c=eElEDukSWi6HsUPXflSebpUm7j9tPNq7WvFOGIlqgeA="
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">تويوتا</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://t4.ftcdn.net/jpg/08/91/68/25/360_F_891682541_TjhpvvUsVBkJBxRJarAgz84Q3io5OpEE.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فيراري</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-vector/luxury-premium-realistic-sedan-coupe-600nw-2263077435.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">جي كلاس</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://waryhub.com/files/preview/900x810/11742911193rvpbgpfxlfjyo6f11rqgnkfstuesyavdgpsiy4zq4ebujlivtlyqe4pnregxsgluhee96v1yslsr0ct3jl1upkn5ns9skeegktym.png"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">نيسان</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.freeiconspng.com/thumbs/car-front-png/bmw-car-front-png-30.png" alt=""
+                        width="100" height="60" />
+                    <div class="brand-title">بي ام دبليو</div>
+                </div>
+                <div class="col-2 brand">
+                    <img src="https://www.shutterstock.com/image-illustration/paris-france-january-9-2022-260nw-2215355157.jpg"
+                        alt="" width="100" height="60" />
+                    <div class="brand-title">فورد</div>
+                </div>
+            </div>
+        </div>
+        <div class="collapse-btn-row">
+            <button class="btn btn-light collapse-btn mt-4" type="button"data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                شاهد جميع الماركات <i class="bi bi-caret-down-fill"></i>
+            </button>
+        </div>
+    </div>
 </div>

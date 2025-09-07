@@ -1,0 +1,6 @@
+.icon-saudi_riyal::before {
+  content: "\e900";
+  font-family: "saudi_riyal" !important;
+  font-size: 118%;
+  color: inherit;
+}
