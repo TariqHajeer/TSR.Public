@@ -82,7 +82,7 @@ header .sub .row > div {
 }
 
 .sub {
-  height: 100px;
+  height: 65px;
   border-bottom: thin solid var(--gold);
   box-shadow: 0 0 12px silver;
 }
@@ -90,20 +90,18 @@ header .sub .row > div {
 header .sub ul.menu {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-top: 20px;
 }
 header .sub ul.action {
   list-style: none;
   padding: 0;
-  margin: 0;
   display: flex;
-  align-items: center;
   width: 100%;
   justify-content: left;
+  margin-top: 20px;
 }
 .action li {
   margin: 0px 0.8rem;
@@ -133,14 +131,11 @@ header .sub ul.action {
 }
 .logo-wrapper {
   margin: 0 auto;
-  height: 60px;
-  height: 100px;
   padding: 15px;
   margin-left: auto;
   margin-right: 0;
   padding-right: 0;
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 
@@ -150,7 +145,7 @@ header .sub ul.action {
 
 .logo-wrapper img {
   height: 100%;
-  width: 200px !important;
+  width: 100px !important;
 }
 
 /* end header section */
@@ -159,6 +154,14 @@ header .sub ul.action {
 .site-footer {
   position: relative;
   margin-top: 2.5rem;
+}
+.site-footer .pattern {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.site-footer .pattern img {
+  height: 200px !important;
 }
 @media screen and (min-width: 992px) {
   .site-footer {
@@ -172,18 +175,18 @@ header .sub ul.action {
   border-top: 1px solid;
 }
 .site-footer .footer-row.dark {
-  color: var(--color-text-primary);
-  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--color-text-lighter);
+  border-color: rgb(255 253 253 / 17%) ;
 }
 .site-footer .footer-row.dark .footer-inner {
-  border-color: rgba(0, 0, 0, 0.1);
+  border-color: rgb(255 253 253 / 17%) ;
 }
 .site-footer .footer-row.dark .custom-column {
-  border-left-color: rgba(0, 0, 0, 0.1) !important;
+  border-left-color: rgb(255 253 253 / 17%) !important;
 }
 .site-footer .footer-row.dark .sub-banners ul li + li {
-  border-top-color: rgba(0, 0, 0, 0.1);
-  border-right-color: rgba(0, 0, 0, 0.1);
+  border-top-color: rgb(255 253 253 / 17%) ;
+  border-right-color: rgb(255 253 253 / 17%) ;
 }
 .site-footer .footer-row.light {
   color: #fff;
@@ -200,7 +203,7 @@ header .sub ul.action {
   border-right-color: rgba(255, 255, 255, 0.15);
 }
 .site-footer .footer-row.custom-background-light {
-  background-color: #f6f7f9;
+  background-color: var(--green);
 }
 .site-footer .footer-row.custom-background-dark {
   background-color: #212529;
@@ -361,8 +364,6 @@ header .sub ul.action {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
 }
 .site-footer .footer-widgets .footer-sidebar > * {
@@ -445,12 +446,7 @@ header .sub ul.action {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-@media screen and (min-width: 992px) {
-  .site-footer .footer-copyright .footer-inner {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
-  }
-}
+
 .site-footer .footer-copyright .copyright-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,6 +661,7 @@ header .sub ul.action {
   .widget_about_company .company-content .entry-title {
     font-size: 1.125rem;
     margin-bottom: 0.9375rem;
+    color: var(--gold);
   }
 }
 .widget_about_company .company-content .entry-description {
