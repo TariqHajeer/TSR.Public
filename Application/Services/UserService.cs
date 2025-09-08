@@ -1,4 +1,4 @@
-using System;
+using Application.Dtos.Common;
 using Application.Dtos.UserDtos;
 using Application.Enums;
 using Application.Interfaces;
@@ -23,8 +23,36 @@ public class UserService : IUserService
         }
         if (result.Status == EnumPublicUserStatus.Active)
         {
-            _userSessionManager.SetCurrentUser(result);
+            var sessionUser = SessionUserDto.FromUser(result);
+            sessionUser.NeedToVerifyOtp = true;
+            _userSessionManager.SetCurrentUser(sessionUser);
+            await _apiService.PostAsync("Otp/addOtp", new RequestOtp()
+            {
+                Mobile = result.MobileNo,
+                UserId = sessionUser.NationalId
+            });
         }
         return result.Status;
+    }
+    public async Task<bool> ValidateOtp(string otp)
+    {
+        if (string.IsNullOrEmpty(otp))
+        {
+            throw new ArgumentNullException(nameof(otp));
+        }
+        var user = _userSessionManager.GetCurrentUser();
+        var request = new VerifyOTPDto
+        {
+            Code = otp,
+            UserId = user.NationalId
+        };
+        var result = await _apiService.PostAsync<VerifyOTPDto, ResultMessageDto>("Otp/VerifyOtp", request);
+        var success = result?.IsSuccess ?? false;
+        if (success)
+        {
+            user.NeedToVerifyOtp = false;
+            _userSessionManager.SetCurrentUser(user);
+        }
+        return success;
     }
 }

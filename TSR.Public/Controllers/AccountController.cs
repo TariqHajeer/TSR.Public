@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using TSR.Public.Helper;
@@ -47,7 +46,8 @@ namespace TSR.Public.Controllers
             {
                 ModelState.AddModelError("", _loc["YourAccountIsNotActivatedYet"].Value);
             }
-            return View(model);
+
+            return RedirectToAction("OtpVerification", "Home", new { returnUrl = model.ReturnUrl });
         }
         [HttpGet]
         public IActionResult Logout()
@@ -58,6 +58,24 @@ namespace TSR.Public.Controllers
         public ViewResult AccessDenied()
         {
             return View();
+        }
+        [HttpGet]
+        public IActionResult OtpVerification(string? returnUrl)
+        {
+            ViewData["ReturnUrl"] = returnUrl; 
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> OtpVerification(string code, string? returnUrl)
+        {
+            var result=  await _userService.ValidateOtp(code);
+            if (!result)
+            {
+                ViewData["ReturnUrl"] = returnUrl;
+                ModelState.AddModelError(nameof(code), _loc["OtpIsNotCorrect"]);
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
         }
     }
 }

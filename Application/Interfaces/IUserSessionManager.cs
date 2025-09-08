@@ -6,7 +6,7 @@ namespace Application.Interfaces;
 public interface IUserSessionManager
 {
 
-    void SetCurrentUser(UserDto user);
-    UserDto? GetCurrentUser();
+    void SetCurrentUser(SessionUserDto user);
+    SessionUserDto? GetCurrentUser();
 
 }
