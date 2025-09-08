@@ -29,7 +29,8 @@ public class ApiService : IApiService
         return new HttpResult
         {
             StatusCode = (int)response.StatusCode,
-            Content = content
+            Content = content,
+            IsSuccessStatusCode = response.IsSuccessStatusCode
         };
     }
     public async Task<TResult> GetAsync<TResult>(string url, Dictionary<string, string>? headers = null)
@@ -51,8 +52,22 @@ public class ApiService : IApiService
         return new HttpResult
         {
             StatusCode = (int)response.StatusCode,
-            Content = resultContent
+            Content = resultContent,
+            IsSuccessStatusCode = response.IsSuccessStatusCode
         };
+    }
+    public async Task<TResult> PostAsync<TRequest, TResult>(string url, TRequest data, Dictionary<string, string>? headers = null)
+    {
+        AddHeaders(headers);
+        var content = new StringContent(JsonSerializer.Serialize(data), Encoding.UTF8, "application/json");
+
+        var response = await _httpClient.PostAsync(url, content);
+        if (!response.IsSuccessStatusCode)
+        {
+            return default;
+        }
+        return await Deserialize<TResult>(response);
+
     }
 
     public async Task<HttpResult> DeleteAsync(string url, Dictionary<string, string>? headers = null)
@@ -64,7 +79,8 @@ public class ApiService : IApiService
         return new HttpResult
         {
             StatusCode = (int)response.StatusCode,
-            Content = content
+            Content = content,
+            IsSuccessStatusCode = response.IsSuccessStatusCode
         };
     }
     public async Task<HttpResult> PostFormAsync(string url, Dictionary<string, string> formData, Dictionary<string, string>? headers = null)
@@ -79,7 +95,8 @@ public class ApiService : IApiService
         return new HttpResult
         {
             StatusCode = (int)response.StatusCode,
-            Content = resultContent
+            Content = resultContent,
+            IsSuccessStatusCode = response.IsSuccessStatusCode
         };
     }
 
@@ -93,7 +110,8 @@ public class ApiService : IApiService
         return new HttpResult
         {
             StatusCode = (int)response.StatusCode,
-            Content = resultContent
+            Content = resultContent,
+            IsSuccessStatusCode = response.IsSuccessStatusCode
         };
     }
 

@@ -14,6 +14,8 @@ public static class DependencyInjection
     client.BaseAddress = new Uri(baseUrl);
 });
         services.AddScoped<IBrandService, BrandService>();
+        services.AddSingleton<ISessionManager, SessionManager>();
+        services.AddSingleton<IUserSessionManager, UserSessionManager>();
 
         return services;
     }
